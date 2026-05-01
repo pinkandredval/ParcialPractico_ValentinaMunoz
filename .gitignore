@@ -1,0 +1,17 @@
+# Bases de datos — pesan demasiado para GitHub
+datos/
+*.csv
+!submission.csv
+!sample_submission.csv
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+__pycache__/
+
+# Archivos temporales de Spark
+spark-warehouse/
+derby.log
+metastore_db/
+
+# Variables de entorno
+.env
