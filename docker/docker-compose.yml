@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  jupyter-pyspark:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: parcial_ml_2026
+    ports:
+      - "8888:8888"
+      - "4040:4040"  # Spark UI
+    volumes:
+      - ../notebooks:/home/jovyan/work/notebooks
+      - ../datos:/home/jovyan/work/datos
+    environment:
+      - JUPYTER_TOKEN=ml2026
+      - JUPYTER_ENABLE_LAB=yes
+    restart: unless-stopped
